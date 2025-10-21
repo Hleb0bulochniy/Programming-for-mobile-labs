@@ -1,0 +1,73 @@
+package com.example.editor;
+import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.ToggleButton;
+
+public class MainActivity extends AppCompatActivity implements
+View.OnClickListener {
+    private float mTextSize = 20;
+    private EditText mEdit;
+    private TextView tSize;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mEdit = findViewById(R.id.edit_text);
+        tSize = findViewById(R.id.size);
+        ToggleButton buttonB = findViewById(R.id.button_b);
+        ToggleButton buttonI = findViewById(R.id.button_i);
+        RadioButton buttonSans = findViewById(R.id.button_sans);
+        ***
+        Button buttonMinus = findViewById(R.id.button_minus);
+        buttonB.setOnClickListener(this);
+        buttonI.setOnClickListener(this);
+        ***
+    }
+
+
+
+6
+
+
+
+    @Override
+    public void onClick(View v) {
+        int but = v.getId();
+        if (but == R.id.button_b) {
+            if (mEdit.getTypeface().getStyle() == Typeface.ITALIC)
+                mEdit.setTypeface(mEdit.getTypeface(),
+Typeface.BOLD_ITALIC);
+            else if (mEdit.getTypeface().getStyle() ==
+Typeface.BOLD_ITALIC)
+                mEdit.setTypeface(mEdit.getTypeface(), Typeface.ITALIC);
+            else if (mEdit.getTypeface().getStyle() == Typeface.BOLD)
+                mEdit.setTypeface(Typeface.create(mEdit.getTypeface(),
+Typeface.NORMAL));
+            else mEdit.setTypeface(mEdit.getTypeface(), Typeface.BOLD);
+        }
+        else if (but == R.id.button_i) {
+            ***
+        }
+        else if (but == R.id.button_sans)
+           mEdit.setTypeface(Typeface.SANS_SERIF,
+mEdit.getTypeface().getStyle());
+         ***
+        else if (but == R.id.button_plus) {
+            if (mTextSize <= 72)
+                mTextSize += 2;
+            mEdit.setTextSize(mTextSize);
+            tSize.setText(Integer.toString((int) mTextSize));
+        }
+        else if (but == R.id.button_minus) {
+            if (mTextSize >= 20)
+                mTextSize -= 2;
+            ***
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">3</string>
+    <string name="bold">Bold</string>
+    <string name="italic">Italic</string>
+    <string name="sansserif">SansSerif</string>
+    <string name="serif">Serif</string>
+    <string name="monospace">MonoSpace</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+</resources>
