@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sashenkov_5</string>
+    <string name="text">Hello world!</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="color">Color</string>
+    <string name="exit">Exit</string>
+    <string name="font">Font</string>
+    <string name="new_font1">Font 1</string>
+    <string name="new_font2">Font 2</string>
+</resources>
