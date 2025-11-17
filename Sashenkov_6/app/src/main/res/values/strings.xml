@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sashenkov_6</string>
+    <string name="dialog_message">Exit app?</string>
+    <string name="exit">Exit</string>
+    <string name="close">Close</string>
+    <string name="edit">Edit</string>
+</resources>
